@@ -1,0 +1,19 @@
+{
+  "name": "outlook-addin-sample-boilerplate",
+  "version": "1.0.0",
+  "description": "## Docs and Links https://docs.microsoft.com/en-us/outlook/add-ins/manifests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synle/outlook-addin-sample-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/synle/outlook-addin-sample-boilerplate/issues"
+  },
+  "homepage": "https://github.com/synle/outlook-addin-sample-boilerplate#readme"
+}
