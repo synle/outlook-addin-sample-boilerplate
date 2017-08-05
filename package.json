@@ -4,7 +4,8 @@
   "description": "## Docs and Links https://docs.microsoft.com/en-us/outlook/add-ins/manifests",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint src"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/synle/outlook-addin-sample-boilerplate/issues"
   },
-  "homepage": "https://github.com/synle/outlook-addin-sample-boilerplate#readme"
+  "homepage": "https://github.com/synle/outlook-addin-sample-boilerplate#readme",
+  "devDependencies": {
+    "eslint": "^3",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0"
+  }
 }
