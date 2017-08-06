@@ -38,5 +38,5 @@ app.get('/api', function(req, res) {
 
 var server = https.createServer(serverOptions, app)
     .listen(port, function(){
-        console.log('listen to port', port);
+        console.log('listen to port, https://...', port);
     });
