@@ -12,8 +12,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Add-in Command Demo" />
   <Description DefaultValue="Adds command buttons to the ribbon in Outlook"/>
-  <IconUrl DefaultValue="{addin_app_url}/images/icon.png" />
-  <HighResolutionIconUrl DefaultValue="{addin_app_url}/images/icon.png" />
+  <IconUrl DefaultValue="{addin_app_url}/dist/images/icon.png" />
+  <HighResolutionIconUrl DefaultValue="{addin_app_url}/dist/images/icon.png" />
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>
@@ -26,10 +26,10 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <!-- NOTE: Just reusing the read taskpane page that is invoked by the button
+        <!-- NOTE: Just reusing the read taskpane page that is invoked by the buttonP
              on the ribbon in clients that support add-in commands. You can
              use a completely different page if desired -->
-        <SourceLocation DefaultValue="{addin_app_url}/AppRead/TaskPane/TaskPane.html"/>
+        <SourceLocation DefaultValue="{addin_app_url}/dist/page-main.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
