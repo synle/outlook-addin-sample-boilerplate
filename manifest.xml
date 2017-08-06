@@ -142,7 +142,7 @@
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="https://localhost.com/dist/page-function.html" />
         <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost.com/dist/page-main.html?mode=read" />
-        <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost.com?mode=compose"/>
+        <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost.com/dist/page-main.html?mode=compose"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="My Outlook Demo Addin" />

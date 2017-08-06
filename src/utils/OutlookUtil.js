@@ -234,9 +234,9 @@ OutlookUtil.prependItemBody = () => {
 
 
 // binding the office init
-Office.initialize = () => {
+Office.initialize = (reason) => {
     item = Office.context.mailbox.item;
-    _resolvePromiseDoneInit();
+    _resolvePromiseDoneInit(reason);
 };
 
 export default OutlookUtil;
