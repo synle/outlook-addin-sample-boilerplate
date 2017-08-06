@@ -51,23 +51,8 @@
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
-          <FunctionFile resid="functionFile" />
-
-
-          <!-- Message read form -->
-          <ExtensionPoint xsi:type="MessageReadCommandSurface">
-          </ExtensionPoint>
-
-          <!-- Message compose form -->
-          <ExtensionPoint xsi:type="MessageComposeCommandSurface">
-          </ExtensionPoint>
-
           <!-- Appointment compose form -->
           <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
-          </ExtensionPoint>
-
-          <!-- Appointment read form -->
-          <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
