@@ -1,2 +1,4 @@
 node_moduldes
 *.pem
+dist/*.js
+dist/*.css
