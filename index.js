@@ -25,6 +25,10 @@ var serverOptions = {
 
 app = express()
 
+// static asset
+app.use('/dist', express.static('dist'));
+
+
 app.get('/', function(req, res) {
     res.writeHead(200, {"Content-Type": "text/plain"});
     res.end("Responded from the Web Itself : Hello World\n");
