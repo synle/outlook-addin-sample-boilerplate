@@ -6,11 +6,11 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
   xsi:type="MailApp">
-  <Id>7164e750-dc86-49c0-1234-1bac57abdc7c</Id>
+  <Id>7164e750-dc86-49c0-b548-1bac57abdddd</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Microsoft Outlook Dev Center</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Demo Addin" />
+  <DisplayName DefaultValue="My Outlook Demo Addin" />
   <Description DefaultValue="Demo Addin Description"/>
   <IconUrl DefaultValue="https://localhost.com/dist/images/icon.png" />
   <HighResolutionIconUrl DefaultValue="https://localhost.com/dist/images/icon.png" />
@@ -53,6 +53,80 @@
         <DesktopFormFactor>
           <!-- Appointment compose form -->
           <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="appointmentComposeGroup">
+                <Label resid="groupLabel" />
+
+                <!-- Task pane button -->
+                <Control xsi:type="Button" id="appointmentComposeOpenPaneButton">
+                  <Label resid="paneButtonLabel" />
+                  <Supertip>
+                    <Title resid="paneSuperTipTitle" />
+                    <Description resid="paneSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="app-icon-png-url-16" />
+                    <bt:Image size="32" resid="app-icon-png-url-32" />
+                    <bt:Image size="80" resid="app-icon-png-url-80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="composeTaskPaneUrl" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+
+          <!-- Message compose form -->
+          <ExtensionPoint xsi:type="MessageComposeCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="messageComposeGroup">
+                <Label resid="groupLabel" />
+
+                <!-- Task pane button -->
+                <Control xsi:type="Button" id="messageComposeOpenPaneButton">
+                  <Label resid="paneButtonLabel" />
+                  <Supertip>
+                    <Title resid="paneSuperTipTitle" />
+                    <Description resid="paneSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="app-icon-png-url-16" />
+                    <bt:Image size="32" resid="app-icon-png-url-32" />
+                    <bt:Image size="80" resid="app-icon-png-url-80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="composeTaskPaneUrl" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+
+          <!-- Message read form -->
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="messageReadGroup">
+                <Label resid="groupLabel" />
+
+                <!-- Task pane button -->
+                <Control xsi:type="Button" id="messageReadOpenPaneButton">
+                  <Label resid="paneButtonLabel" />
+                  <Supertip>
+                    <Title resid="paneSuperTipTitle" />
+                    <Description resid="paneSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="app-icon-png-url-16" />
+                    <bt:Image size="32" resid="app-icon-png-url-32" />
+                    <bt:Image size="80" resid="app-icon-png-url-80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="readTaskPaneUrl" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
@@ -61,44 +135,22 @@
     <Resources>
       <bt:Images>
         <!-- Blue icon -->
-        <bt:Image id="blue-icon-16" DefaultValue="https://localhost.com/dist/images/icon.png" />
-        <bt:Image id="blue-icon-32" DefaultValue="https://localhost.com/dist/images/icon.png" />
-        <bt:Image id="blue-icon-80" DefaultValue="https://localhost.com/dist/images/icon.png" />
-        <!-- Red icon -->
-        <bt:Image id="red-icon-16" DefaultValue="https://localhost.com/dist/images/icon.png" />
-        <bt:Image id="red-icon-32" DefaultValue="https://localhost.com/dist/images/icon.png" />
-        <bt:Image id="red-icon-80" DefaultValue="https://localhost.com/dist/images/icon.png" />
-        <!-- Green icon -->
-        <bt:Image id="green-icon-16" DefaultValue="https://localhost.com/dist/images/icon.png" />
-        <bt:Image id="green-icon-32" DefaultValue="https://localhost.com/dist/images/icon.png" />
-        <bt:Image id="green-icon-80" DefaultValue="https://localhost.com/dist/images/icon.png" />
+        <bt:Image id="app-icon-png-url-16" DefaultValue="https://localhost.com/dist/images/icon.png" />
+        <bt:Image id="app-icon-png-url-32" DefaultValue="https://localhost.com/dist/images/icon.png" />
+        <bt:Image id="app-icon-png-url-80" DefaultValue="https://localhost.com/dist/images/icon.png" />
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="https://localhost.com/dist/page-function.html" />
-        <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost.com/dist/page-main.html" />
+        <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost.com/dist/page-main.html?mode=read" />
+        <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost.com?mode=compose"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="groupLabel" DefaultValue="Add-in Demo" />
-        <bt:String id="funcReadButtonLabel" DefaultValue="Get subject" />
-        <bt:String id="menuReadButtonLabel" DefaultValue="Get property" />
-        <bt:String id="paneReadButtonLabel" DefaultValue="Display all properties" />
-
-        <bt:String id="funcReadSuperTipTitle" DefaultValue="Gets the subject of the message or appointment" />
-        <bt:String id="menuReadSuperTipTitle" DefaultValue="Choose a property to get" />
-        <bt:String id="paneReadSuperTipTitle" DefaultValue="Get all properties" />
-
-        <bt:String id="menuItem1ReadLabel" DefaultValue="Get item class" />
-        <bt:String id="menuItem2ReadLabel" DefaultValue="Get date time created" />
-        <bt:String id="menuItem3ReadLabel" DefaultValue="Get item ID" />
+        <bt:String id="groupLabel" DefaultValue="My Outlook Demo Addin" />
+        <bt:String id="paneButtonLabel" DefaultValue="Launch My Outlook Demo Addin"/>
+        <bt:String id="paneSuperTipTitle" DefaultValue="Launch My Outlook Demo Addin paneSuperTipTitle"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="funcReadSuperTipDescription" DefaultValue="Gets the subject of the message or appointment and displays it in the info bar. This is an example of a function button." />
-        <bt:String id="menuReadSuperTipDescription" DefaultValue="Gets the selected property of the message or appointment and displays it in the info bar. This is an example of a drop-down menu button." />
-        <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens a pane displaying all available properties of the message or appointment. This is an example of a button that opens a task pane." />
-
-        <bt:String id="menuItem1ReadTip" DefaultValue="Gets the item class of the message or appointment and displays it in the info bar." />
-        <bt:String id="menuItem2ReadTip" DefaultValue="Gets the date and time the message or appointment was created and displays it in the info bar." />
-        <bt:String id="menuItem3ReadTip" DefaultValue="Gets the item ID of the message or appointment and displays it in the info bar." />
+        <bt:String id="paneSuperTipDescription" DefaultValue="Launch My Outlook Demo Addin paneSuperTipDescription" />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

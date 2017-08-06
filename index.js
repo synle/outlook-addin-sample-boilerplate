@@ -18,8 +18,8 @@ proxy.on('error', function(e) {
 });
 
 var serverOptions = {
-    key: fs.readFileSync('./cert/key.pem'),
-    cert: fs.readFileSync('./cert/cert.crt')
+    key: fs.readFileSync('./cert/server.key'),
+    cert: fs.readFileSync('./cert/server.crt')
 };
 
 
