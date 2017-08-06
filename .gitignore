@@ -1,4 +1,4 @@
 node_moduldes
-*.pem
+cert
 dist/*.js
 dist/*.css
